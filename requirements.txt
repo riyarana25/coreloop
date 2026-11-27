@@ -1,0 +1,9 @@
+ortools
+numpy
+pandas
+pytest
+streamlit
+plotly
+python-pptx
+playwright
+Pillow

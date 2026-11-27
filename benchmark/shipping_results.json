@@ -1,0 +1,183 @@
+{
+ "n": 100,
+ "policies": {
+  "1. Weekly Friday": {
+   "shipment_events": 41.58,
+   "loads": 41.58,
+   "freight": 4814.4231,
+   "cost_per_core": 16.048077,
+   "missed_planned": 0.0,
+   "on_time_rate": 1.0,
+   "expected_loss": 0.0,
+   "utilisation": 0.18251559139640847,
+   "net_benefit": 87979.37689999999
+  },
+  "2. Basic deadline rule (each core on its last safe day)": {
+   "shipment_events": 141.07,
+   "loads": 141.07,
+   "freight": 8885.893399999999,
+   "cost_per_core": 29.619644666666662,
+   "missed_planned": 0.0,
+   "on_time_rate": 0.843134,
+   "expected_loss": 14565.765249999997,
+   "utilisation": 0.053871328638356815,
+   "net_benefit": 69342.14134999999
+  },
+  "3. Optimised planner, buffer 0": {
+   "shipment_events": 17.39,
+   "loads": 20.11,
+   "freight": 3898.9380000000006,
+   "cost_per_core": 12.996460000000003,
+   "missed_planned": 0.0,
+   "on_time_rate": 0.9815033333333334,
+   "expected_loss": 1774.1051499999999,
+   "utilisation": 0.3775508865345181,
+   "net_benefit": 87120.75685
+  },
+  "4a. Optimised, buffer 1": {
+   "shipment_events": 18.51,
+   "loads": 21.3,
+   "freight": 3946.9119,
+   "cost_per_core": 13.156373,
+   "missed_planned": 0.0,
+   "on_time_rate": 0.9931453333333333,
+   "expected_loss": 638.9553,
+   "utilisation": 0.35643279672501416,
+   "net_benefit": 88207.9328
+  },
+  "4b. Optimised, buffer 2": {
+   "shipment_events": 19.32,
+   "loads": 22.13,
+   "freight": 3986.6614,
+   "cost_per_core": 13.288871333333335,
+   "missed_planned": 0.0,
+   "on_time_rate": 0.9985486666666666,
+   "expected_loss": 143.41155,
+   "utilisation": 0.34319273565930636,
+   "net_benefit": 88663.72705
+  },
+  "4c. Optimised, buffer 3": {
+   "shipment_events": 21.61,
+   "loads": 24.48,
+   "freight": 4090.9837000000007,
+   "cost_per_core": 13.636612333333336,
+   "missed_planned": 0.0,
+   "on_time_rate": 1.0,
+   "expected_loss": 0.0,
+   "utilisation": 0.31060531465265817,
+   "net_benefit": 88702.8163
+  }
+ },
+ "sensitivity": [
+  {
+   "scenario": "carrier delay: low delay risk",
+   "net_benefit": {
+    "1. Weekly Friday": 87636.9425,
+    "2. Basic deadline rule (each core on its last safe day)": 78041.29687499997,
+    "3. Optimised planner, buffer 0": 87972.10712500001,
+    "4a. Optimised, buffer 1": 88393.79325000002,
+    "4b. Optimised, buffer 2": 88478.36775,
+    "4c. Optimised, buffer 3": 88367.771
+   }
+  },
+  {
+   "scenario": "carrier delay: base delay risk",
+   "net_benefit": {
+    "1. Weekly Friday": 87636.9425,
+    "2. Basic deadline rule (each core on its last safe day)": 69098.11799999999,
+    "3. Optimised planner, buffer 0": 86772.533375,
+    "4a. Optimised, buffer 1": 87845.36225,
+    "4b. Optimised, buffer 2": 88328.731375,
+    "4c. Optimised, buffer 3": 88367.771
+   }
+  },
+  {
+   "scenario": "carrier delay: high delay risk",
+   "net_benefit": {
+    "1. Weekly Friday": 87636.9425,
+    "2. Basic deadline rule (each core on its last safe day)": 53565.90075000001,
+    "3. Optimised planner, buffer 0": 84480.7605,
+    "4a. Optimised, buffer 1": 86622.63875,
+    "4b. Optimised, buffer 2": 87879.82225,
+    "4c. Optimised, buffer 3": 88367.771
+   }
+  },
+  {
+   "scenario": "carrier delay: severe delay risk",
+   "net_benefit": {
+    "1. Weekly Friday": 87636.9425,
+    "2. Basic deadline rule (each core on its last safe day)": 44728.598875,
+    "3. Optimised planner, buffer 0": 82247.59137499999,
+    "4a. Optimised, buffer 1": 84843.76725,
+    "4b. Optimised, buffer 2": 86717.9443125,
+    "4c. Optimised, buffer 3": 87791.4950625
+   }
+  },
+  {
+   "scenario": "freight rate x0.5",
+   "net_benefit": {
+    "1. Weekly Friday": 88682.3575,
+    "2. Basic deadline rule (each core on its last safe day)": 70043.41075,
+    "3. Optimised planner, buffer 0": 87772.82612499999,
+    "4a. Optimised, buffer 1": 88841.708625,
+    "4b. Optimised, buffer 2": 89335.266875,
+    "4c. Optimised, buffer 3": 89377.008
+   }
+  },
+  {
+   "scenario": "freight rate x2",
+   "net_benefit": {
+    "1. Weekly Friday": 85428.56875,
+    "2. Basic deadline rule (each core on its last safe day)": 66945.92125,
+    "3. Optimised planner, buffer 0": 84723.66287500001,
+    "4a. Optimised, buffer 1": 85806.86825,
+    "4b. Optimised, buffer 2": 86276.24287500001,
+    "4c. Optimised, buffer 3": 86317.12574999999
+   }
+  },
+  {
+   "scenario": "base fee x0.5",
+   "net_benefit": {
+    "1. Weekly Friday": 88361.405,
+    "2. Basic deadline rule (each core on its last safe day)": 71925.78425,
+    "3. Optimised planner, buffer 0": 87108.064625,
+    "4a. Optimised, buffer 1": 88201.72725000001,
+    "4b. Optimised, buffer 2": 88706.651375,
+    "4c. Optimised, buffer 3": 88803.1085
+   }
+  },
+  {
+   "scenario": "base fee x2",
+   "net_benefit": {
+    "1. Weekly Friday": 86082.18375,
+    "2. Basic deadline rule (each core on its last safe day)": 63265.314249999996,
+    "3. Optimised planner, buffer 0": 86056.210875,
+    "4a. Optimised, buffer 1": 87090.1735,
+    "4b. Optimised, buffer 2": 87537.638875,
+    "4c. Optimised, buffer 3": 87471.48475
+   }
+  },
+  {
+   "scenario": "capacity 150 lb per load",
+   "net_benefit": {
+    "1. Weekly Friday": 87182.4375,
+    "2. Basic deadline rule (each core on its last safe day)": 69063.8085,
+    "3. Optimised planner, buffer 0": 85921.527625,
+    "4a. Optimised, buffer 1": 86999.16375,
+    "4b. Optimised, buffer 2": 87511.833625,
+    "4c. Optimised, buffer 3": 87568.2625
+   }
+  },
+  {
+   "scenario": "capacity 1000 lb per load",
+   "net_benefit": {
+    "1. Weekly Friday": 87636.9425,
+    "2. Basic deadline rule (each core on its last safe day)": 69098.11799999999,
+    "3. Optimised planner, buffer 0": 86876.194875,
+    "4a. Optimised, buffer 1": 87949.42975,
+    "4b. Optimised, buffer 2": 88442.57287500001,
+    "4c. Optimised, buffer 3": 88485.2
+   }
+  }
+ ]
+}
