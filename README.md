@@ -14,7 +14,7 @@ streamlit run ui/app.py                               # the 7-screen demo app (S
 python benchmark/audit_frequency_experiment.py 200 60 # audit-frequency experiment (a few minutes)
 python audit/independent_validation.py 30             # classifier validation on a second generator
 python shipping/shipping_benchmark.py 100 40          # freight and shipping benchmark
-python presentation/build_deck.py                     # rebuild the 6-slide deck
+python presentation/build_deck.py                     # rebuild the 8-slide deck
 python scripts/batch_eval.py                          # original v0 benchmark (200 seeds)
 ```
 
@@ -29,16 +29,16 @@ python scripts/batch_eval.py                          # original v0 benchmark (2
 | `data/store.py` | SQLite persistence of decisions and audit trail |
 | `ui/app.py` | Streamlit rendering only |
 | `benchmark/` | Experiment code, methodology, results (.md and .json) |
-| `research/` | Baseline audit, Tekion landscape, competitors, theme fit, strategy, source register, organiser question (draft, not sent) |
+| `research/` | Baseline audit, Tekion landscape, competitors, theme fit, strategy, source register |
 | `tests/` | Regression, parity, adversarial, app tests; `test_strategy.md`, `adversarial_results.md` |
-| `presentation/` | Deck, demo script and data, speaker notes, 20 judge Q&As, screenshots, demo video |
+| `presentation/` | Deck (PPTX and PDF), screenshots, demo video |
 
 ## Key results (synthetic)
-- Total loss per 600-core ledger: 90-day audit $26.1k, 30-day $11.8k, 7-day $4.3k, event-driven $4.4k. Continuous vs weekly: -$114 +/-$53 (a tie). Staff hours 30.2 vs 134.8.
+- Total loss per 600-core ledger: 90-day audit $26.1k, 30-day $11.8k, 7-day $4.3k, event-driven $4.4k. Continuous vs weekly: -$114 +/-$53 (practically level). Staff hours 30.2 vs 134.8.
 - Classifier on held-out independent data: recall 99.8%, precision 84.6%, false-positive rate 2.5% (naive overdue rule: 20.1% precision). Its first version scored 49.7%; see `audit/validation_results.md`.
 - Shipping vs weekly Friday: 48-58% fewer shipment events, 15-19% lower simulated freight; net benefit break-even to slightly positive.
 
 ## Limits
-Synthetic data only. No Tekion integration exists or is claimed; whether Tekion already covers parts of this is unknown (`research/tekion_product_landscape.md`). Validation generator shares an author with the classifier. The net benefit versus a weekly audit flips sign under cheap audits or expensive software. CoreLoop is not a marketplace. An LLM is deliberately not used.
+Synthetic data only. No Tekion integration exists or is claimed; whether Tekion already covers parts of this is unknown (`research/tekion_product_landscape.md`). Validation generator shares an author with the classifier. The net benefit versus a weekly audit flips sign under cheap audits or expensive software. An LLM is deliberately not used.
 
 Start with `docs/HANDOFF.md`, then `docs/ASSUMPTIONS.md`, then `research/final_product_strategy.md`.
